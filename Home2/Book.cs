@@ -54,7 +54,7 @@ namespace Home2
                 usercontrol1[i].proid = reader.GetString(0);
                 usercontrol1[i].procategory = reader.GetString(1);
                 usercontrol1[i].Nam = reader.GetString(2);
-                usercontrol1[i].Price = reader.GetString(6);
+                usercontrol1[i].Price = reader.GetString(5);
                 usercontrol1[i].Quantity = reader.GetString(9);
                 string img = reader.GetString(3);
                 string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
