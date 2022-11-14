@@ -89,7 +89,7 @@ namespace Home2
 
         private void cartButton_Click(object sender, EventArgs e)
         {
-            Cart cartObject = new Cart();
+            cart cartObject = new cart(Idx);
             this.Hide();
             cartObject.Show();
         }

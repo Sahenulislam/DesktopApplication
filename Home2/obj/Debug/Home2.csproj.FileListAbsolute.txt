@@ -58,3 +58,4 @@ C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.cs
 C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.csproj.CopyComplete
 C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.exe
 C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.pdb
+C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.Cart.resources
