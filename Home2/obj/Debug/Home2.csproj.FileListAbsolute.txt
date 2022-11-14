@@ -950,5 +950,9 @@ C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.cs
 C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.csproj.CopyComplete
 C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.exe
 C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.pdb
+<<<<<<< HEAD
+C:\Users\Redoan\Documents\8th\SOftware engineer\Project\Home2\obj\Debug\Home2.Cart.resources
+=======
 >>>>>>> f365b437a025d2ace2e7f4bcf260b36782a44cb0
 C:\Users\sahen\Desktop\project ecommerce c#\Home2\obj\Debug\Home2.Cart.resources
+>>>>>>> 23efdcb1a9f52ca4a73425fc4335e3f9b0005e80
