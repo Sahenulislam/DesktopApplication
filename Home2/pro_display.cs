@@ -116,6 +116,41 @@ namespace Home2
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DescriptionForm ob6 = new DescriptionForm(this.procategory,this.Type, this.Namex, this.Idx, this.Emailx);
+            ob6.Show();
+            if (procategory == "Women")
+            {
+                ob.Hide();
+            }
+            else if (procategory == "Men")
+            {
+                ob1.Hide();
+            }
+            else if (procategory == "Shoe")
+            {
+                ob2.Hide();
+            }
+            else if (procategory == "Book")
+            {
+                ob3.Hide();
+            }
+            else if (procategory == "Bag")
+            {
+                ob4.Hide();
+            }
+            else if (procategory == "Furniture")
+            {
+                ob5.Hide();
+            }
+        }
+
+        private void pro_display_Load(object sender, EventArgs e)
+        {
+
+        }
     }
    
 }

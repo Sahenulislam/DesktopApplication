@@ -889,3 +889,4 @@ C:\Users\sahen\Desktop\project ecommerce c#\Home2\obj\Debug\Home2.csproj.CoreCom
 C:\Users\sahen\Desktop\project ecommerce c#\Home2\obj\Debug\Home2.csproj.CopyComplete
 C:\Users\sahen\Desktop\project ecommerce c#\Home2\obj\Debug\Home2.exe
 C:\Users\sahen\Desktop\project ecommerce c#\Home2\obj\Debug\Home2.pdb
+C:\Users\sahen\Desktop\project ecommerce c#\Home2\obj\Debug\Home2.DescriptionForm.resources

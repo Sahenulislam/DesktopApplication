@@ -68,5 +68,10 @@ namespace Home2
             Form1 form1ob = new Form1(this.Type, this.Namex, this.Idx, this.Emailx);
             form1ob.Show();
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

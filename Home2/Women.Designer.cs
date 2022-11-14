@@ -50,7 +50,6 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = global::Home2.Properties.Resources._2;
             this.pictureBox4.Location = new System.Drawing.Point(20, 16);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -80,6 +79,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 536);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // Women
             // 
@@ -88,7 +88,6 @@
             this.ClientSize = new System.Drawing.Size(880, 626);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Women";
             this.Text = "Women";
