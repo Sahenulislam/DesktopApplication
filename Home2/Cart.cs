@@ -30,7 +30,6 @@ namespace Home2
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader = command.ExecuteReader();
 
-            bool f = false;
 
             string id, name, qunt, price, total;
             while (reader.Read())
