@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Home2"
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\Home2.sln",
+=======
+  "SelectedNode": "\\Home2\\user_panel.cs",
+>>>>>>> f365b437a025d2ace2e7f4bcf260b36782a44cb0
   "PreviewInSolutionExplorer": false
 }

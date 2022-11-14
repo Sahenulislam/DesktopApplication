@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Home2
 {
@@ -17,18 +18,20 @@ namespace Home2
         string Emailx = null;
         string Type = null;
         string procategory = null;
-        public DescriptionForm(string procategory, string Type, string Namex, int Idx, string Emailx)
+        string pro_id = null;
+
+        public DescriptionForm(string procatagory, string pro_id, string Type, string Namex, int Idx, string Emailx)
         {
             InitializeComponent();
-            this.MinimumSize = new Size(20, 20);
+            this.MinimumSize = new Size(60, 50);
             this.CenterToScreen();
-            this.Namex = Namex;
+            this.procategory = procatagory;
+            this.pro_id = pro_id;
             this.Type = Type;
+            this.Namex = Namex;
             this.Idx = Idx;
             this.Emailx = Emailx;
-            this.procategory = procategory;
         }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
@@ -78,6 +81,45 @@ namespace Home2
                 pro_display.ob5 = ob;
                 ob.Show();
             }
+        }
+
+       
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            
+           
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DescriptionForm_Load(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("datasource=localhost;username=root;password=;database=#shop");
+            conn.Open();
+            string x = pro_id.ToString();
+            string query = "select *from add_product where pro_id=" + x + ";";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string img = reader.GetString(3);
+                string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                PictureBox.Image = new Bitmap(path + "\\Image\\" + img);
+                PictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                Description.Text = reader.GetString(8);
+                waranty.Text = reader.GetString(5);
+
+            }
+            conn.Close();
+        }
+
+        private void Address_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

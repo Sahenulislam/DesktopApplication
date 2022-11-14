@@ -86,5 +86,12 @@ namespace Home2
             Form1 ob = new Form1(this.Type, this.Namex, this.Idx, this.Emailx);
             ob.Show();
         }
+
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            Cart cartObject = new Cart();
+            this.Hide();
+            cartObject.Show();
+        }
     }
 }

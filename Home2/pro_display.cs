@@ -119,7 +119,7 @@ namespace Home2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DescriptionForm ob6 = new DescriptionForm(this.procategory,this.Type, this.Namex, this.Idx, this.Emailx);
+            DescriptionForm ob6 = new DescriptionForm(procategory,proid, this.Type, this.Namex, this.Idx, this.Emailx);
             ob6.Show();
             if (procategory == "Women")
             {

@@ -74,7 +74,7 @@ namespace Home2
    
             commandd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Successfully Buy");
+            MessageBox.Show("Thank you for being with us!");
             this.Hide();
             Form1 obj = new Form1(this.Type, this.Namex, this.Idx, this.Emailx);
             obj.Show();
