@@ -88,6 +88,12 @@
     <Compile Include="Book.Designer.cs">
       <DependentUpon>Book.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashondelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,12 +222,6 @@
     <Compile Include="UserContact.Designer.cs">
       <DependentUpon>UserContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl3.Designer.cs">
-      <DependentUpon>UserControl3.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlUserProductBuy.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -287,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Book.resx">
       <DependentUpon>Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashondelivery.resx">
       <DependentUpon>Cashondelivery.cs</DependentUpon>
@@ -360,9 +363,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserContact.resx">
       <DependentUpon>UserContact.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl3.resx">
-      <DependentUpon>UserControl3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUserProductBuy.resx">
       <DependentUpon>UserControlUserProductBuy.cs</DependentUpon>
@@ -481,25 +481,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\21.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="AxWMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="WMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\payment.jpg" />
