@@ -13,10 +13,10 @@ namespace Home2
     public partial class user_panel : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
-        public user_panel(string Type,string Namex, int Idx, string Emailx)
+        public user_panel(string Type,string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);
@@ -37,7 +37,7 @@ namespace Home2
         private void button4_Click(object sender, EventArgs e)
         {
             this.Namex = "NULL";
-            this.Idx = -1;
+            this.Idx = null;
             this.Emailx = "NULL";
             this.Hide();
             Form1 f1 = new Form1(this.Type, this.Namex, this.Idx, this.Emailx);

@@ -14,12 +14,12 @@ namespace Home2
     public partial class Rocket : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
         string pro_id = null;
         string procategory = null;
-        public Rocket(string procategory, string pro_id, string Type, string Namex, int Idx, string Emailx)
+        public Rocket(string procategory, string pro_id, string Type, string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);

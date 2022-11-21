@@ -31,7 +31,7 @@ namespace Home2
             timer1.Stop();
 
             this.Hide();
-            Form1 mn = new Form1("NULL", "NULL", -1, "NULL");
+            Form1 mn = new Form1("NULL", "NULL", "NULL", "NULL");
             mn.Show();
 
         }

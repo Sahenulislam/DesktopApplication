@@ -14,12 +14,12 @@ namespace Home2
     public partial class Master_card : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
         string pro_id = null;
         string procategory = null;
-        public Master_card(string procategory,string pro_id,string Type, string Namex, int Idx, string Emailx)
+        public Master_card(string procategory,string pro_id,string Type, string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);

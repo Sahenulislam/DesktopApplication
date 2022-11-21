@@ -14,11 +14,11 @@ namespace Home2
     public partial class Contact : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
         MySqlConnection connection = new MySqlConnection();
-        public Contact(string Type, string Namex, int Idx, string Emailx)
+        public Contact(string Type, string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.CenterToScreen();

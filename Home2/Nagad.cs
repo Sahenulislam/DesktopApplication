@@ -14,12 +14,12 @@ namespace Home2
     public partial class Nagad : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
         string pro_id = null;
         string procategory = null;
-        public Nagad(string procategory, string pro_id, string Type, string Namex, int Idx, string Emailx)
+        public Nagad(string procategory, string pro_id, string Type, string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);

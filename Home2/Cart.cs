@@ -15,9 +15,9 @@ namespace Home2
     {
         string usrID;
 
-        public cart(int ID)
+        public cart(string ID)
         {
-            usrID = ID.ToString();
+            usrID = ID;
             InitializeComponent();
         }
 
@@ -27,6 +27,7 @@ namespace Home2
             conn.Open();
             
             string query = "SELECT `product_id`,`product_name`,`quantity`,`price`,(`quantity`*`price`) as `total` FROM `cart` WHERE `user_id`= "+usrID;
+            MessageBox.Show(usrID);
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader = command.ExecuteReader();
 

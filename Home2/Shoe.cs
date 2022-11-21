@@ -14,10 +14,10 @@ namespace Home2
     public partial class Shoe : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
-        public Shoe(string Type,string Namex, int Idx, string Emailx)
+        public Shoe(string Type,string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             //this.MinimumSize = new Size(5, 5);
