@@ -13,11 +13,11 @@ namespace Home2
     public partial class user_login : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
 
-        public user_login(string Type,string Namex, int Idx, string Emailx)
+        public user_login(string Type,string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);
@@ -55,6 +55,7 @@ namespace Home2
                 if (reader.GetString(1)==Username&&reader.GetString(3)==Password)
                 {
                     f = true;
+                    this.Idx = reader.GetString(0);
                     this.Namex = reader.GetString(1);
                     this.Type = "USER";
                     break; 
@@ -64,6 +65,7 @@ namespace Home2
             if (f==true)
             {
                 this.Hide();
+                //MessageBox.Show(this.Idx.ToString());
                 user_panel user_panelObject = new user_panel(this.Type, this.Namex, this.Idx, this.Emailx);
                 user_panelObject.Show();
             }

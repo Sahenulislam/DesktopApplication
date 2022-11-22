@@ -13,10 +13,10 @@ namespace Home2
     public partial class admin_panel : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
-        public admin_panel(string Type, string Namex, int Idx, string Emailx)
+        public admin_panel(string Type, string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(20, 20);
@@ -30,7 +30,7 @@ namespace Home2
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 From1Object = new Form1("NULL","NULL", -1, "NULL");
+            Form1 From1Object = new Form1("NULL","NULL","NULL", "NULL");
             From1Object.Show();
         }
         private void button7_Click(object sender, EventArgs e)

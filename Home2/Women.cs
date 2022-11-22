@@ -15,10 +15,10 @@ namespace Home2
     {
        
         string Namex=null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx=null;
         string Type=null;
-        public Women(string Type,string Namex, int Idx, string Emailx)
+        public Women(string Type,string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(20, 20);
@@ -48,7 +48,7 @@ namespace Home2
                 usercontrol1[i].procategory = reader.GetString(1);
                 usercontrol1[i].Nam = reader.GetString(2);
                 usercontrol1[i].Price = reader.GetString(5);
-                usercontrol1[i].Quantity = reader.GetString(9);
+                usercontrol1[i].Quantity = reader.GetString(8);
                 string img = reader.GetString(3);
                 string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                 // MessageBox.Show(image);

@@ -15,10 +15,10 @@ namespace Home2
     public partial class Furniture : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx =null;
         string Emailx = null;
         string Type = null;
-        public Furniture(string Type,string Namex, int Idx, string Emailx)
+        public Furniture(string Type,string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(20, 20);

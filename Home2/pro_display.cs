@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace Home2
 {
     public partial class pro_display : UserControl
@@ -19,11 +19,12 @@ namespace Home2
         static public Bag ob4;
         static public Furniture ob5;
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
-        public pro_display(string Type, string Namex, int Idx, string Emailx)
+        public pro_display(string Type, string Namex, string Idx, string Emailx)
         {
+            MessageBox.Show(Idx.ToString());
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);
             this.Type = Type;
@@ -80,37 +81,60 @@ namespace Home2
                 MessageBox.Show("For Buy You Need to Login First");
                 user_login ob8 = new user_login(this.Type, this.Namex, this.Idx, this.Emailx);
                 ob8.Show();
+                if (procategory == "Women")
+                {
+                    ob.Hide();
+                }
+                else if (procategory == "Men")
+                {
+                    ob1.Hide();
+                }
+                else if (procategory == "Shoe")
+                {
+                    ob2.Hide();
+                }
+                else if (procategory == "Book")
+                {
+                    ob3.Hide();
+                }
+                else if (procategory == "Bag")
+                {
+                    ob4.Hide();
+                }
+                else if (procategory == "Furniture")
+                {
+                    ob5.Hide();
+
+                }
             }
             else
             {
-                Payment ob6 = new Payment(procategory,proid, this.Type, this.Namex, this.Idx, this.Emailx);
-                ob6.Show();
-            }
-            if (procategory == "Women")
-            {
-                ob.Hide();
-            }
-            else if (procategory == "Men")
-            {
-                ob1.Hide();
-            }
-            else if (procategory == "Shoe")
-            {
-                ob2.Hide();
-            }
-            else if (procategory == "Book")
-            {
-                ob3.Hide();
-            }
-            else if (procategory == "Bag")
-            {
-                ob4.Hide();
-            }
-            else if (procategory == "Furniture")
-            {
-                ob5.Hide();
+                MySqlConnection conn = new MySqlConnection("datasource=localhost;username=root;password=;database=#shop");
+                conn.Open();
+                string q = "select *from add_product where pro_id=" +proid+ "";
+                MySqlCommand command = new MySqlCommand(q, conn);
+                MySqlDataReader reader = command.ExecuteReader();
+                string pro_name=null;
+                string pro_quantity=null;
+                string pro_price=null;
+                while(reader.Read())
+                {
+                    pro_name = reader.GetString(2);
+                    pro_quantity = reader.GetString(3);
+                    pro_price = reader.GetString(4);
+                 
+                }
+                //MessageBox.Show(this.Idx.ToString());
+                string pro_id = _proid;
+                //MessageBox.Show(pro_id);
+                string query = "insert into cart(user_id,product_id ,product_name,quantity,price)values('" + this.Idx + "','" + pro_id + "','" + pro_name + "','" + pro_quantity + "','" + pro_price + "');";
+                MySqlCommand commandd = new MySqlCommand(query, conn);
+
+                //commandd.ExecuteNonQuery();
+                conn.Close();
 
             }
+            
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {

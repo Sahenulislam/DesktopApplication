@@ -13,10 +13,10 @@ namespace Home2
     public partial class user_reg : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
-        public user_reg(string Type,string Namex, int Idx, string Emailx)
+        public user_reg(string Type,string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);

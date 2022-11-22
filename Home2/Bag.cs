@@ -14,10 +14,10 @@ namespace Home2
     public partial class Bag : Form
     {
         string Namex = null;
-        int Idx = -1;
+        string Idx = null;
         string Emailx = null;
         string Type = null;
-        public Bag(string Type, string Namex, int Idx, string Emailx)
+        public Bag(string Type, string Namex, string Idx, string Emailx)
         {
             InitializeComponent();
             this.MinimumSize = new Size(20, 50);
