@@ -14,10 +14,12 @@ namespace Home2
     public partial class cart : Form
     {
         string usrID;
-
-        public cart(string ID)
+        user_panel upOb;
+        int allTotal = 0;
+        public cart(string ID,user_panel ob)
         {
             usrID = ID;
+            upOb = ob;
             InitializeComponent();
         }
 
@@ -31,7 +33,7 @@ namespace Home2
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader = command.ExecuteReader();
 
-
+            int tk;
             string id, name, qunt, price, total;
             while (reader.Read())
             {
@@ -41,12 +43,25 @@ namespace Home2
                 price = reader.GetString(3);
                 total = reader.GetString(4);
 
+                tk= System.Convert.ToInt32(total);
+                allTotal += tk;
                 cartGrid.Rows.Add(new object[] { id, name, qunt, price, total });
-
             }
             conn.Close();
 
+            labelAllTotal.Text = allTotal.ToString();
             
+        }
+
+        private void cart_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            upOb.Show();
+            this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
