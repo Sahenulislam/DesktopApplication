@@ -89,11 +89,11 @@ namespace Home2
 
         private void cartButton_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             cart cartObject = new cart(Type, Namex, Idx,Emailx);
-=======
+
             cart cartObject = new cart(Idx,this);
->>>>>>> 2cc23533e78600e3688c6258843f676105136a0c
+
             this.Hide();
             cartObject.Show();
         }
