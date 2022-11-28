@@ -13,12 +13,19 @@ namespace Home2
 {
     public partial class cart : Form
     {
-        string usrID;
-
-        public cart(string ID)
+        string Namex = null;
+        string Idx = null;
+        string Emailx = null;
+        string Type = null;
+        public cart(string Type, string Namex, string Idx, string Emailx)
         {
-            usrID = ID;
             InitializeComponent();
+            this.MinimumSize = new Size(60, 50);
+            this.CenterToScreen();
+            this.Namex = Namex;
+            this.Type = Type;
+            this.Idx = Idx;
+            this.Emailx = Emailx;
         }
 
         private void Cart_Load(object sender, EventArgs e)
@@ -26,8 +33,8 @@ namespace Home2
             MySqlConnection conn = new MySqlConnection("datasource=localhost;username=root;password=;database=#shop");
             conn.Open();
             
-            string query = "SELECT `product_id`,`product_name`,`quantity`,`price`,(`quantity`*`price`) as `total` FROM `cart` WHERE `user_id`= "+usrID;
-            MessageBox.Show(usrID);
+            string query = "SELECT `product_id`,`product_name`,`quantity`,`price`,(`quantity`*`price`) as `total` FROM `cart` WHERE `user_id`= "+this.Idx;
+            //MessageBox.Show(usrID);
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader = command.ExecuteReader();
 
@@ -47,6 +54,13 @@ namespace Home2
             conn.Close();
 
             
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            user_panel obx = new user_panel(this.Type, this.Namex, this.Idx, this.Emailx);
+            obx.Show();
         }
     }
 }

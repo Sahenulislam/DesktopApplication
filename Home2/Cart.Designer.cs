@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cartGrid = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,8 +36,10 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BackBatton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBatton)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,14 +56,14 @@
             this.cartGrid.AllowUserToResizeColumns = false;
             this.cartGrid.AllowUserToResizeRows = false;
             this.cartGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cartGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(96)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cartGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.cartGrid.ColumnHeadersHeight = 35;
             this.cartGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -120,18 +122,34 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
+            // BackBatton
+            // 
+            this.BackBatton.BackColor = System.Drawing.Color.White;
+            this.BackBatton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackBatton.Image = global::Home2.Properties.Resources._2;
+            this.BackBatton.Location = new System.Drawing.Point(25, 11);
+            this.BackBatton.Margin = new System.Windows.Forms.Padding(2);
+            this.BackBatton.Name = "BackBatton";
+            this.BackBatton.Size = new System.Drawing.Size(34, 34);
+            this.BackBatton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BackBatton.TabIndex = 6;
+            this.BackBatton.TabStop = false;
+            this.BackBatton.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(865, 477);
+            this.Controls.Add(this.BackBatton);
             this.Controls.Add(this.panel1);
             this.Name = "cart";
             this.Text = "cart";
             this.Load += new System.EventHandler(this.Cart_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cartGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBatton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,5 +163,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.PictureBox BackBatton;
     }
 }
