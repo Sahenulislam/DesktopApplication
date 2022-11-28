@@ -36,7 +36,13 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
             this.BackBatton = new System.Windows.Forms.PictureBox();
+=======
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelAllTotal = new System.Windows.Forms.Label();
+>>>>>>> 2cc23533e78600e3688c6258843f676105136a0c
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackBatton)).BeginInit();
@@ -45,7 +51,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.cartGrid);
-            this.panel1.Location = new System.Drawing.Point(25, 50);
+            this.panel1.Location = new System.Drawing.Point(28, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(828, 345);
             this.panel1.TabIndex = 0;
@@ -72,7 +78,7 @@
             this.Price,
             this.Total});
             this.cartGrid.EnableHeadersVisualStyles = false;
-            this.cartGrid.Location = new System.Drawing.Point(0, 0);
+            this.cartGrid.Location = new System.Drawing.Point(3, 3);
             this.cartGrid.MultiSelect = false;
             this.cartGrid.Name = "cartGrid";
             this.cartGrid.ReadOnly = true;
@@ -122,6 +128,7 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
+<<<<<<< HEAD
             // BackBatton
             // 
             this.BackBatton.BackColor = System.Drawing.Color.White;
@@ -135,22 +142,68 @@
             this.BackBatton.TabIndex = 6;
             this.BackBatton.TabStop = false;
             this.BackBatton.Click += new System.EventHandler(this.pictureBox4_Click);
+=======
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrder.Font = new System.Drawing.Font("Noto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Location = new System.Drawing.Point(365, 418);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(140, 38);
+            this.btnOrder.TabIndex = 1;
+            this.btnOrder.Text = "Order Now";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Serif", 15.75F);
+            this.label1.Location = new System.Drawing.Point(599, 360);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "All Total :";
+            // 
+            // labelAllTotal
+            // 
+            this.labelAllTotal.AutoSize = true;
+            this.labelAllTotal.Font = new System.Drawing.Font("Noto Serif", 15.75F);
+            this.labelAllTotal.Location = new System.Drawing.Point(700, 360);
+            this.labelAllTotal.Name = "labelAllTotal";
+            this.labelAllTotal.Size = new System.Drawing.Size(31, 28);
+            this.labelAllTotal.TabIndex = 3;
+            this.labelAllTotal.Text = "tk";
+>>>>>>> 2cc23533e78600e3688c6258843f676105136a0c
             // 
             // cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(865, 477);
             this.Controls.Add(this.BackBatton);
+=======
+            this.ClientSize = new System.Drawing.Size(868, 477);
+            this.Controls.Add(this.labelAllTotal);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnOrder);
+>>>>>>> 2cc23533e78600e3688c6258843f676105136a0c
             this.Controls.Add(this.panel1);
             this.Name = "cart";
             this.Text = "cart";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.cart_FormClosing);
             this.Load += new System.EventHandler(this.Cart_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cartGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackBatton)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -163,6 +216,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+<<<<<<< HEAD
         private System.Windows.Forms.PictureBox BackBatton;
+=======
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAllTotal;
+>>>>>>> 2cc23533e78600e3688c6258843f676105136a0c
     }
 }

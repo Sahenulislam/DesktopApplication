@@ -24,7 +24,7 @@ namespace Home2
         string Type = null;
         public pro_display(string Type, string Namex, string Idx, string Emailx)
         {
-            MessageBox.Show(Idx.ToString());
+          //  MessageBox.Show(Idx.ToString());
             InitializeComponent();
             this.MinimumSize = new Size(60, 50);
             this.Type = Type;
@@ -111,7 +111,7 @@ namespace Home2
             {
                 MySqlConnection conn = new MySqlConnection("datasource=localhost;username=root;password=;database=#shop");
                 conn.Open();
-                string q = "select *from add_product where pro_id=" +proid+ "";
+                string q = "select * from add_product where pro_id=" +proid;
                 MySqlCommand command = new MySqlCommand(q, conn);
                 MySqlDataReader reader = command.ExecuteReader();
                 string pro_name=null;
@@ -120,17 +120,18 @@ namespace Home2
                 while(reader.Read())
                 {
                     pro_name = reader.GetString(2);
-                    pro_quantity = reader.GetString(3);
-                    pro_price = reader.GetString(4);
+                    pro_quantity = reader.GetString(8);
+                    pro_price = reader.GetString(5);
                  
                 }
+                reader.Close();
                 //MessageBox.Show(this.Idx.ToString());
                 string pro_id = _proid;
-                //MessageBox.Show(pro_id);
-                string query = "insert into cart(user_id,product_id ,product_name,quantity,price)values('" + this.Idx + "','" + pro_id + "','" + pro_name + "','" + pro_quantity + "','" + pro_price + "');";
+                
+                string query = "insert into cart(user_id,product_id ,product_name,quantity,price)values('" + this.Idx + "','" + pro_id + "','" + pro_name + "','" + pro_quantity + "','" + pro_price+ "');";
                 MySqlCommand commandd = new MySqlCommand(query, conn);
-
-                //commandd.ExecuteNonQuery();
+                 MessageBox.Show(query);
+                commandd.ExecuteNonQuery();
                 conn.Close();
 
             }

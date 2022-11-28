@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 08:47 PM
+-- Generation Time: Nov 22, 2022 at 03:21 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -106,7 +106,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`user_id`, `product_id`, `product_name`, `quantity`, `price`) VALUES
-(1, '1012', 'Kameez', 10, 100);
+(1, '1012', 'Kameez', 10, 100),
+(3, '1011', 'Sharee', 1, 2500);
 
 -- --------------------------------------------------------
 
